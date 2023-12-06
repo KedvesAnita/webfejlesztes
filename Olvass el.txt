@@ -1,0 +1,12 @@
+Az oldal készítője: Kedves Anita
+A weboldal elérhetősége:
+Az oldal egy fiktív körömszalon weboldala, amelyen megtalálható a bemutatkozás, árak, időpont foglalási lehetőség és egy galéria az eddig elkészített munkákról. 
+A java script kod a Foglalas.html oldalon található,amely a kiválasztott szolgáltatásokat összeadja és közli a kuncsafttal, hogy mennyibe kerülnek a választott szolgáltatások.
+Az egyedi fonttípus, Pacifico, megtalálható minden oldalon a headerben, címként. 
+A galériában felhasznált képek sajátok.
+Felhasznált források:
+fonttípus: https://www.fontsquirrel.com/tools/webfont-generator
+favicon: https://www.favicon-generator.org/
+színek: https://www.webfx.com/web-design/color-picker/
+header és footerben található képek: https://hu.pinterest.com/
+https://www.w3schools.com/

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+<head>
+  <meta charset="utf-8">
+	<meta name="author" content="Kedves Anita">
+  <meta name="copyright" content="Csak tanulmányi célokra">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="kepek/favicon.ico" type="image/x-icon">
+  <script src="datumellenorzo.js"></script>
+  <script src="sajat.js"></script>
+	<script src="galleria-1.6.1/jquery-3.7.1.min.js"></script>
+	<script src="jquery-validation-1.19.5/dist/jquery.validate.min.js"></script>
+	<script>
+		$(document).ready(function(){
+		$("#myform").validate({ 
+			rules: {
+nev: "required",
+telefonszam:{
+required: true,
+tel:true,
+},
+email: {
+required: true,
+email: true
+},
+datum:{
+required: true,
+},
+elfogad : "required",
+},
+
+messages: {
+nev: "Kérlek írd be a neved!",
+telefonszam:"Kérlek írd be a telefonszámod!",
+datum:"Kérlek válassz egy dátumot!",
+email: " Kérlek valós email címet adj meg!",
+elfogad: " Kérlek fogadd el feltételeinket!",
+},
+
+		});
+		});
+		</script>
+
+	<title>Körömkastély</title>
+
+</head>
+<body>
+
+<header ><h1>Körömkastély </h1>
+<nav>
+            <ul>
+                <li><a href="index.html">Bemutatkozás</a></li>
+                <li><a href="Arak.html">Árak</a></li>
+                <li><a href="Galeria.html">Galéria</a></li>
+                <li><a class="active" href="#">Foglalás</a></li>
+            </ul>
+        </nav>
+</header>
+<article>
+ <h2>Jelentkezz időpontért!</h2>
+<form  action="http://szamtud.uni-corvinus.hu/receive.php"  method="post" id="myform" novalidate>
+        <p><label for="nev">Név:</label>
+        <input type="text" id="nev" name="nev"></p>
+
+        <p><label for="telefonszam">Telefonszám:</label>
+        <input type="tel" id="telefonszam" name="telefonszam" size="20" ></p>
+
+        <p><label for="email">E-mail cím:</label>
+        <input type="email" id="email" name="email"></p>
+
+        <p><label for="datum">Dátum:</label>
+        <input type="date" id="datum" name="datum"><br>Emailban visszajelzést küldünk a kiválasztott nappal kapcsolatos lehetőségekről.</p>
+		
+<p>Mely szolgáltatásainkat igényeli az alábbiak közül?<br>
+  <input type="checkbox" name="szolgaltatas" value="7000">
+  Manikűr<br>
+  <input type="checkbox" name="szolgaltatas" value="8500">
+  Japán manikűr<br>
+  <input type="checkbox" name="szolgaltatas" value="9000">
+  Gél lakkozás manikűrrel<br>
+  <input type="checkbox" name="szolgaltatas" value="10000">
+  Gél lakk csere manikűrrel<br>
+  <input type="checkbox" name="szolgaltatas" value="7500">
+  Gél lakk eltávolítás manikűrrel <br>
+  <input type="checkbox" name="szolgaltatas" value="16000">
+  Zselés műköröm építés<br>
+  <input type="checkbox" name="szolgaltatas" value="14100">
+  Zselés műköröm töltés <br>
+  <input type="checkbox" name="szolgaltatas" value="18000">
+  Zselés műköröm újraépítése<br>
+  <input type="checkbox" name="szolgaltatas" value="17000">
+  Porcelán műköröm építés <br>
+  <input type="checkbox" name="szolgaltatas" value="15000">
+  Porcelán műköröm töltés<br>
+  <input type="checkbox" name="szolgaltatas" value="19000">
+  Porcelán műköröm újraépítése <br>
+  <input type="checkbox" name="szolgaltatas" value="8500">
+  Zselés műköröm eltávolítása manikűrrel<br>
+  <input type="checkbox" name="szolgaltatas" value="10000">
+  Porcelán műköröm eltávolítása manikűrrel<br>
+
+  <button onclick="kalkulator()">Árkalkuláció</button><br>
+ Végösszeg: <a id="vegosszege">0</a> Ft
+
+</p>
+		
+		<p>Van bármilyen allergiája?<br>
+		<input type="radio" id="allergia1" name="allergia" value="i"><label for="allergia1">igen</label> <br>
+
+		<input type="radio" id="allergia2" name="allergia" value="n" checked><label for="allergia2">nem</label> 
+		</p>
+		 
+		  <p><label for="megjegyzes">Megjegyzés:</label><br>
+        <textarea id="megjegyzes" name="megjegyzes" rows="4" cols="50"></textarea></p> 
+		
+		<p><label for="ertekeles">Ha járt már szalonunkban, kérjük értékelje!</label><br>
+		 1<input type="range" id="ertekeles" name="ertekeles" min="1" max="10" step="1" value="5">10</p>
+		
+		<p><label for="elfogad">Kérjük olvassa el figyelmesen a <a class="szabaly" href="szabalyzat.html">szabályzat</a>ot!</label><br>
+			<label for="elfogad">Elolvastam és elfogadom a feltételeket.</label> <input type="checkbox" id="elfogad" name="elfogad" value="ON"></p>
+
+        <p><input type="submit" value="Elküld"> <input value="Törlés" type="reset"></p>
+  </form>
+</article>
+
+
+<footer>
+<aside class="lablec">
+<h3>Elérhetőségeink: </h3>
+<dl>
+<dt>Instagram:</dt>
+<dd>@KromKastely</dd>
+<dt>Facebook:</dt>
+<dd>Körömkastély</dd>
+<dt>Email:</dt>
+<dd>koromkastely@email.hu</dd>
+</dl>
+</aside>
+<aside class="lablec">
+<h3>Nyitvatartás: </h3>
+<dl>
+<dt>Hétfő-Péntek:</dt>
+<dd>8:00-20:00</dd>
+<dt>Szombat:</dt>
+<dd>12:00-18:00</dd>
+<dt>Vasárnap:</dt>
+<dd>Zárva</dd>
+</dl>
+
+</aside>
+</footer>
+</body>
+</html>

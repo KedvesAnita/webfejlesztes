@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fcf1fa;
+    padding: 0;
+    margin: 0;
+
+}
+
+header {
+    font-size: 24px;
+    font-weight: 700;
+    background-image: url("kepek/hatter.JPG");
+    background-size: cover;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+nav {
+    padding: 0;
+		
+}
+
+nav > * {
+    margin: 20px;
+    height: fit-content;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    background-color: #ffffff;
+    border-radius: 0px 25px;
+    text-align: center;
+    margin: 10px;
+    color: #e8c6e4;
+	transition: all 1s;
+}
+
+nav ul li a.active {
+    background-color: #ffffff;
+    color: #d489c8;
+    border-radius: 25px 0px;
+}
+
+nav li a:hover {
+    color: #d489c8;
+    border-radius: 25px 0px;
+	transition: all 0.5s;
+}
+
+article {
+    color: #a05694;
+    line-height: 1.5em;
+    font-weight: 800;
+    font-size: large;
+	
+}
+
+p {
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #de94d2;
+    font-family: 'sajat', 'Pacifico';
+	
+}
+
+
+
+
+@font-face {
+    font-family: "sajat";
+    src: url('sajat_betutipus/Pacifico.ttf');
+}
+
+h2 {
+	font-style: italic;
+    text-align: center;
+    color: #a05694;
+	animation: alcim 1.5s ;
+	font-size:35px;
+}
+@keyframes alcim {
+  from {font-size:20px;}
+  to {font-size:35px;}
+}
+
+footer {
+    background-image: url("kepek/hatter2.JPG");
+    background-size: cover;
+    text-align: center;
+    color: #4c0240;
+    margin: 0;
+    border-radius: 5px 5px 0px 0px;
+
+}
+
+h3 {
+    color: #a05694;
+}
+
+
+.lablec dl dt {
+    font-weight: 800;
+}
+
+aside.lablec {
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+	
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+	margin-top: 25px;
+  margin-bottom: 30px;
+ 
+ 
+}
+
+th, td {
+    border: 4px dotted #ffffff;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f9dff6;;
+}
+
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+form , #keret  {
+  border:7px dotted #ffffff;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
+  background-color: #f9dff6;
+  max-width:100%;
+  height:auto;
+}
+
+button , input[type="submit"],input[type="reset"] {
+    background-color: #ffffff;
+	border: none;
+	border-radius: 0px 25px;
+	color:#a05694;
+	
+}
+
+button, input[type="submit"]:hover, input[type="reset"]:hover  {
+	font-size: 1em;
+}
+:root{
+  accent-color : #e8c6e4;
+}
+p, a{
+	text-decoration: none;
+	color:#a05694;
+}
+.szabaly:hover{
+	color:#e8c6e4;
+}
+.galleria {
+    display:flex;
+   margin-top:10px ;
+   margin-bottom:30px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+label.error {
+color: #de94d2; 
+}
+
+@media only screen and (min-width: 600px) {
+    /* tablet */
+    nav > * {
+        height: 150px;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    footer {
+        display: flex;
+    }	
+}
+
+@media only screen and (min-width: 768px) {
+    /* számítógép */
+
+    .lablec {
+        display: flex;
+    }
+}
