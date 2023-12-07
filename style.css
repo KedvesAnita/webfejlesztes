@@ -14,7 +14,7 @@ body {
 header {
     font-size: 24px;
     font-weight: 700;
-    background-image: url("kepek/hatter.JPG");
+    background-image: url("kepek/hatter.jpg");
     background-size: cover;
     background-attachment: scroll;
     background-repeat: no-repeat;
@@ -104,7 +104,7 @@ h2 {
 }
 
 footer {
-    background-image: url("kepek/hatter2.JPG");
+    background-image: url("kepek/hatter2.jpg");
     background-size: cover;
     text-align: center;
     color: #4c0240;
